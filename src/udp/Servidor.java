@@ -28,8 +28,8 @@ public class Servidor {
         try {
             while (true) {
                 // creamos el servidor
-                conexionCliente = new DatagramSocket(puerto, InetAddress.getByName(direccionIp));
-                System.out.println("Servidor escuchando en el puerto " + puerto + " y la direccion ip: " + direccionIp);
+                conexionCliente = new DatagramSocket(puerto);
+                System.out.println("Servidor escuchando en el puerto " + puerto + " y la direccion ip: " + InetAddress.getLocalHost());
 
                 // Creamos un buffer para almacenar los datos
                 byte[] buffer = new byte[1024];
